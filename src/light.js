@@ -5,9 +5,9 @@ class Light extends Component{
     
     render(){
         
-        const toggleClass = 'wall ' + (this.props.isOn===true?'turn-on':"")
+        
         return(
-    <div className={toggleClass}>   
+     
         <div className='light'>
         <div className='screw'></div>
             <div className='switch'>
@@ -15,7 +15,7 @@ class Light extends Component{
             </div>
         <div className='screw'></div>
         </div>
-    </div>    
+   
         )
     }
 }

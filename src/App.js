@@ -10,9 +10,10 @@ class App extends Component {
 
   }
   render(){
-    
+  const toggleClass = 'wall ' + (this.state.isOn===true?'turn-on':"")
   return (
-    <div >
+    <div className={toggleClass} >
+      <Light isOn={this.state.isOn} turnOnOff={this.turnOnOff}/>
       <Light isOn={this.state.isOn} turnOnOff={this.turnOnOff}/>
     </div>
   );
