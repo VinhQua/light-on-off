@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import React,{Component} from 'react';
+import Light from './light.js'
+class App extends Component {
+  state = {isOn:false}
+  turnOnOff = ()=>{
+    const curState = this.state.isOn;
+    this.setState({isOn: !curState});
 
-function App() {
+  }
+  render(){
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Light isOn={this.state.isOn} turnOnOff={this.turnOnOff}/>
     </div>
   );
+}
 }
 
 export default App;
